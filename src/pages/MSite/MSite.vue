@@ -9,7 +9,7 @@
     </span>
     </Header>
     <nav class="msite_nav">
-      <Swiper :options="swiperOption" ref="mySwiper" class="swiper-container">
+      <Swiper :pagination="{ clickable: true }" ref="mySwiper" class="swiper-container">
         <Swiper-slide class="swiper-slide">
           <div class="link_to_food">
             <div class="food_container">
@@ -304,25 +304,26 @@
 </template>
 
 <script type="text/ecmascript-6">
-import {Swiper,SwiperSlide,directive} from 'vue-awesome-swiper'
-import 'swiper/css/swiper.css'
+// import Swiper core and required modules
+import SwiperCore, {Pagination } from 'swiper';
+import {Swiper,SwiperSlide,} from 'swiper/vue'
+import 'swiper/swiper-bundle.css'
+// install Swiper modules
+SwiperCore.use([Pagination]);
 
 export default {
   components:{
     Swiper,
     SwiperSlide
   },
-  directives: {
-    swiper: directive
-  },
-  data() {
-    return {
-      swiperOption: {
-        direction:"horizontal",
-        loop: true
-      }
-    };
-  },
+  // data() {
+  //   return {
+  //     swiperOption: {
+  //       direction:"horizontal",
+  //       loop: true
+  //     }
+  //   };
+  // },
 };
 </script>
 <style scoped lang="stylus" rel="stylesheet/stylus">
