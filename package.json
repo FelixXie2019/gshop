@@ -9,8 +9,11 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "sass-loader": "7.0.3",
     "stylus-loader": "^3.0.2",
-    "vue": "^2.6.10"
+    "swiper": "5.x",
+    "vue": "^2.6.10",
+    "vue-awesome-swiper": "^4.1.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.12.0",

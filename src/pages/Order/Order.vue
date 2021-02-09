@@ -1,10 +1,6 @@
 <template>
   <section class="order">
-    <header class="header">
-      <span class="header_title">
-        <span class="header_title_text">订单列表</span>
-      </span>
-    </header>
+    <Header title="订单列表"></Header>
     <section class="order_no_login">
       <img src="./img/person.png" alt="">
       <h3>登录后查看外卖订单</h3>
@@ -20,23 +16,6 @@
 <style scoped lang="stylus" rel="stylesheet/stylus">
   .order
     width 100%
-    .header
-      width 100%
-      height 45px
-      position fixed
-      left 0
-      top 0
-      z-index 100
-      background-color #02a774
-      .header_title
-        width 30%
-        font-size 22px
-        position absolute
-        top 50%
-        left 50%
-        transform translate(-50%,-50%)
-        color #fff
-        text-align center
     .order_no_login
       width 60%
       padding-top 140px

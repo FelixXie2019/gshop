@@ -1,11 +1,7 @@
 <template>
   <section class="profile">
-    <header class="header">
-      <a class="header_title">
-        <span class="header_title_text">我的</span>
-      </a>
-    </header>
-    <section class="profile-number">
+    <Header title="个人中心"></Header>
+    <section class="profile-number" @click="$router.push('/login')">
       <a href="javascript:" class="profile-link">
         <div class="profile_image">
           <i class="iconfont icon-person"></i>
@@ -103,23 +99,6 @@ export default {}
   @import '../../common/stylus/mixins.styl'
   .profile
     width 100%
-    .header
-      width 100%
-      height 45px
-      position fixed
-      top 0
-      left 0
-      z-index 100
-      background-color #02a774
-      .header_title
-        position absolute
-        top 50%
-        left 50%
-        transform translate(-50%,-50%)
-        color #fff
-        width 30%
-        font-size 22px
-        text-align center
     .profile-number
       top-border-1px(#fff)
       margin-top 45.5px
