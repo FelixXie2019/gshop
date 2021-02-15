@@ -1463,6 +1463,13 @@ aws4@^1.8.0:
   resolved "https://registry.npm.taobao.org/aws4/download/aws4-1.11.0.tgz?cache=0&sync_timestamp=1604101166484&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faws4%2Fdownload%2Faws4-1.11.0.tgz#d61f46d83b2519250e2784daf5b09479a8b41c59"
   integrity sha1-1h9G2DslGSUOJ4Ta9bCUeai0HFk=
 
+axios@^0.21.1:
+  version "0.21.1"
+  resolved "https://registry.npm.taobao.org/axios/download/axios-0.21.1.tgz?cache=0&sync_timestamp=1608609215811&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faxios%2Fdownload%2Faxios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
+  integrity sha1-IlY0gZYvTWvemnbVFu8OXTwJsrg=
+  dependencies:
+    follow-redirects "^1.10.0"
+
 babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
   version "6.26.0"
   resolved "https://registry.npm.taobao.org/babel-code-frame/download/babel-code-frame-6.26.0.tgz#63fd43f7dc1e3bb7ce35947db8fe369a3f58c74b"
@@ -2832,12 +2839,12 @@ dom-serializer@0:
     domelementtype "^2.0.1"
     entities "^2.0.0"
 
-dom7@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npm.taobao.org/dom7/download/dom7-3.0.0.tgz#b861ce5d67a6becd7aaa3ad02942ff14b1240331"
-  integrity sha1-uGHOXWemvs16qjrQKUL/FLEkAzE=
+dom7@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.npm.taobao.org/dom7/download/dom7-2.1.5.tgz#a79411017800b31d8400070cdaebbfc92c1f6377"
+  integrity sha1-p5QRAXgAsx2EAAcM2uu/ySwfY3c=
   dependencies:
-    ssr-window "^3.0.0-alpha.1"
+    ssr-window "^2.0.0"
 
 domain-browser@^1.1.1:
   version "1.2.0"
@@ -3687,7 +3694,7 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
-follow-redirects@^1.0.0:
+follow-redirects@^1.0.0, follow-redirects@^1.10.0:
   version "1.13.2"
   resolved "https://registry.npm.taobao.org/follow-redirects/download/follow-redirects-1.13.2.tgz?cache=0&sync_timestamp=1611606737937&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ffollow-redirects%2Fdownload%2Ffollow-redirects-1.13.2.tgz#dd73c8effc12728ba5cf4259d760ea5fb83e3147"
   integrity sha1-3XPI7/wScoulz0JZ12DqX7g+MUc=
@@ -6495,6 +6502,11 @@ qs@6.7.0:
   resolved "https://registry.npm.taobao.org/qs/download/qs-6.7.0.tgz?cache=0&sync_timestamp=1610598235973&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fqs%2Fdownload%2Fqs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
   integrity sha1-QdwaAV49WB8WIXdr4xr7KHapsbw=
 
+qs@^6.9.6:
+  version "6.9.6"
+  resolved "https://registry.npm.taobao.org/qs/download/qs-6.9.6.tgz?cache=0&sync_timestamp=1610598235973&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fqs%2Fdownload%2Fqs-6.9.6.tgz#26ed3c8243a431b2924aca84cc90471f35d5a0ee"
+  integrity sha1-Ju08gkOkMbKSSsqEzJBHHzXVoO4=
+
 qs@~6.5.2:
   version "6.5.2"
   resolved "https://registry.npm.taobao.org/qs/download/qs-6.5.2.tgz?cache=0&sync_timestamp=1610598235973&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fqs%2Fdownload%2Fqs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
@@ -7311,10 +7323,10 @@ sshpk@^1.7.0:
     safer-buffer "^2.0.2"
     tweetnacl "~0.14.0"
 
-ssr-window@^3.0.0, ssr-window@^3.0.0-alpha.1:
-  version "3.0.0"
-  resolved "https://registry.npm.taobao.org/ssr-window/download/ssr-window-3.0.0.tgz?cache=0&sync_timestamp=1604919636199&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fssr-window%2Fdownload%2Fssr-window-3.0.0.tgz#fd5b82801638943e0cc704c4691801435af7ac37"
-  integrity sha1-/VuCgBY4lD4MxwTEaRgBQ1r3rDc=
+ssr-window@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npm.taobao.org/ssr-window/download/ssr-window-2.0.0.tgz?cache=0&sync_timestamp=1604919636199&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fssr-window%2Fdownload%2Fssr-window-2.0.0.tgz#98c301aef99523317f8d69618f0010791096efc4"
+  integrity sha1-mMMBrvmVIzF/jWlhjwAQeRCW78Q=
 
 ssri@^5.2.4:
   version "5.3.0"
@@ -7585,13 +7597,13 @@ svgo@^1.0.0:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-swiper@^6.4.11:
-  version "6.4.11"
-  resolved "https://registry.npm.taobao.org/swiper/download/swiper-6.4.11.tgz#183b719cd7ccadc1c18558db49242098ca1d564c"
-  integrity sha1-GDtxnNfMrcHBhVjbSSQgmModVkw=
+swiper@^5.2.1:
+  version "5.4.5"
+  resolved "https://registry.npm.taobao.org/swiper/download/swiper-5.4.5.tgz#a350f654bf68426dbb651793824925512d223c0f"
+  integrity sha1-o1D2VL9oQm27ZReTgkklUS0iPA8=
   dependencies:
-    dom7 "^3.0.0"
-    ssr-window "^3.0.0"
+    dom7 "^2.1.5"
+    ssr-window "^2.0.0"
 
 table@4.0.2:
   version "4.0.2"
@@ -8120,6 +8132,11 @@ vue@^2.6.10:
   version "2.6.12"
   resolved "https://registry.npm.taobao.org/vue/download/vue-2.6.12.tgz?cache=0&sync_timestamp=1609359872993&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue%2Fdownload%2Fvue-2.6.12.tgz#f5ebd4fa6bd2869403e29a896aed4904456c9123"
   integrity sha1-9evU+mvShpQD4pqJau1JBEVskSM=
+
+vuex@^3.6.2:
+  version "3.6.2"
+  resolved "https://registry.npm.taobao.org/vuex/download/vuex-3.6.2.tgz#236bc086a870c3ae79946f107f16de59d5895e71"
+  integrity sha1-I2vAhqhww655lG8QfxbeWdWJXnE=
 
 watchpack-chokidar2@^2.0.1:
   version "2.0.1"
