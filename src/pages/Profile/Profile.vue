@@ -1,22 +1,22 @@
 <template>
   <section class="profile">
-    <Header title="个人中心"></Header>
-    <section class="profile-number" @click="$router.push('/login')">
+    <Header title="个 人"/>
+    <section class="profile-number" @click="$router.push(user._id ? '/userinfo' : '/login')">
       <a href="javascript:" class="profile-link">
         <div class="profile_image">
           <i class="iconfont icon-person"></i>
         </div>
         <div class="user-info">
-          <p class="user-info-top">登录/注册</p>
-          <p>
+          <p class="user-info-top" v-if="!user.phone">{{user.name ? user.name : '登录/注册'}}</p>
+          <p v-if="!user.name">
             <span class="user-icon">
-              <i class="iconfont icon-phone"></i>
+              <i class="iconfont icon-shouji icon-mobile"></i>
             </span>
-            <span class="icon-mobile-number">暂无绑定手机号</span>
+            <span class="icon-mobile-number">{{user.phone ? user.phone : '暂无绑定手机号'}}</span>
           </p>
         </div>
         <span class="arrow">
-          <i class="iconfont icon-jiantouyou"></i>
+          <i class="iconfont icon-jiantou1"></i>
         </span>
       </a>
     </section>
@@ -39,25 +39,25 @@
     <section class="profile_my_order border-1px">
       <!-- 我的订单 -->
       <a href='javascript:' class="my_order">
-            <span>
-              <i class="iconfont icon-option2"></i>
-            </span>
+        <span>
+          <i class="iconfont icon-order-s"></i>
+        </span>
         <div class="my_order_div">
           <span>我的订单</span>
           <span class="my_order_icon">
-            <i class="iconfont icon-jiantouyou"></i>
+            <i class="iconfont icon-jiantou1"></i>
           </span>
         </div>
       </a>
       <!-- 积分商城 -->
       <a href='javascript:' class="my_order">
         <span>
-          <i class="iconfont icon-shangcheng"></i>
+          <i class="iconfont icon-jifen"></i>
         </span>
         <div class="my_order_div">
           <span>积分商城</span>
           <span class="my_order_icon">
-            <i class="iconfont icon-jiantouyou"></i>
+            <i class="iconfont icon-jiantou1"></i>
           </span>
         </div>
       </a>
@@ -69,7 +69,7 @@
         <div class="my_order_div">
           <span>硅谷外卖会员卡</span>
           <span class="my_order_icon">
-            <i class="iconfont icon-jiantouyou"></i>
+            <i class="iconfont icon-jiantou1"></i>
           </span>
         </div>
       </a>
@@ -78,29 +78,53 @@
       <!-- 服务中心 -->
       <a href="javascript:" class="my_order">
         <span>
-          <i class="iconfont icon-fuwu-"></i>
+          <i class="iconfont icon-fuwu"></i>
         </span>
         <div class="my_order_div">
           <span>服务中心</span>
           <span class="my_order_icon">
-            <i class="iconfont icon-jiantouyou"></i>
+            <i class="iconfont icon-jiantou1"></i>
           </span>
         </div>
       </a>
+    </section>
+    <section class="profile_my_order border-1px" v-show="user._id">
+      <mt-button style="width: 100%" type="danger" @click="logout">退出登陆</mt-button>
+
     </section>
   </section>
 </template>
 
 <script type="text/ecmascript-6">
-export default {}
+  import {mapState} from 'vuex'
+  import {MessageBox} from 'mint-ui'
+  export default {
+    computed: {
+      ...mapState(['user'])
+    },
+
+    methods: {
+      logout () {
+        MessageBox.confirm('确定执行此操作?').then(
+          () => { // 点击确认
+            this.$store.dispatch('logout')
+          },
+          () => { // 点击取消
+            console.log('点击了取消')
+          }
+        )
+      }
+    }
+  }
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
   @import '../../common/stylus/mixins.styl'
-  .profile
+
+  .profile //我的
     width 100%
+    overflow hidden
     .profile-number
-      top-border-1px(#fff)
       margin-top 45.5px
       .profile-link
         clearFix()
@@ -123,19 +147,19 @@ export default {}
           margin-top 8px
           margin-left 15px
           p
-            font-width 700
+            font-weight: 700
             font-size 18px
             color #fff
             &.user-info-top
               padding-bottom 8px
             .user-icon
               display inline-block
-              margin-left -3px
+              margin-left -15px
               margin-right 5px
               width 20px
               height 20px
-              .icon-phone
-                font-size 25px
+              .icon-mobile
+                font-size 30px
                 vertical-align text-top
             .icon-mobile-number
               font-size 14px
@@ -144,11 +168,11 @@ export default {}
           width 12px
           height 12px
           position absolute
-          right 20px
+          right 15px
           top 40%
-          .icon-jiantouyou
+          .icon-jiantou1
             color #fff
-            font-size 15px
+            font-size 5px
     .profile_info_data
       bottom-border-1px(#e4e4e4)
       width 100%
@@ -188,11 +212,6 @@ export default {}
           .info_data_top
             span
               color #6ac20b
-
-
-
-
-
     .profile_my_order
       top-border-1px(#e4e4e4)
       margin-top 10px
@@ -207,15 +226,15 @@ export default {}
           width 20px
           height 20px
           >.iconfont
-            margin-left -5px
-            font-size 20px
-          .icon-option2
+            margin-left -10px
+            font-size 30px
+          .icon-order-s
             color #02a774
-          .icon-shangcheng
+          .icon-jifen
             color #ff5f3e
           .icon-vip
             color #f90
-          .icon-fuwu-
+          .icon-fuwu
             color #02a774
         .my_order_div
           width 100%
@@ -230,7 +249,7 @@ export default {}
           .my_order_icon
             width 10px
             height 10px
-            .icon-jiantouyou
+            .icon-jiantou1
               color #bbb
               font-size 10px
 </style>

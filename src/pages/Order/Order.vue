@@ -1,24 +1,25 @@
 <template>
   <section class="order">
-    <Header title="订单列表"></Header>
+    <Header title="订 单"/>
     <section class="order_no_login">
-      <img src="./img/person.png" alt="">
+      <img src="./images/person.png">
       <h3>登录后查看外卖订单</h3>
-      <button>立即登录</button>
+      <button>立即登陆</button>
     </section>
   </section>
 </template>
+
 <script type="text/ecmascript-6">
   export default {
   }
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-  .order
+  .order  //订单
     width 100%
     .order_no_login
-      width 60%
       padding-top 140px
+      width 60%
       margin 0 auto
       text-align center
       >img
@@ -38,5 +39,5 @@
         outline none
         border-radius 5px
         padding 10px 20px
- 
+        
 </style>

@@ -1,6 +1,6 @@
-/*
-    vuex最核心的管理对象store
- */
+/* 
+vuex最核心的管理对象store
+*/
 import Vue from 'vue'
 import Vuex from 'vuex'
 
@@ -11,9 +11,10 @@ import getters from './getters'
 
 Vue.use(Vuex)
 
+
 export default new Vuex.Store({
-    state,
-    mutations,
-    actions,
-    getters
+  state,
+  mutations,
+  actions,
+  getters
 })

@@ -7,13 +7,14 @@
 
 <script type="text/ecmascript-6">
   import FooterGuide from '@/components/FooterGuide/FooterGuide.vue'
-
   export default {
 
-     mounted(){
+    async mounted () {
       // 通知action异步获取address并保存到state
       this.$store.dispatch('getAddress')
+      this.$store.dispatch('autoLogin')
     },
+
     components: {
       FooterGuide
     }
